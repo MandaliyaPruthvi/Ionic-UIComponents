@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title style="text-align: center!important;">UIComponent</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <!-- Date Picker Begins -->
+  <ion-card>
+    <ion-card-header>
+      Date Picker
+    </ion-card-header>
+    <ion-card-content>
+      <ion-item>
+        <ion-label>Select Date & Time</ion-label>
+        <ion-datetime displayFormat="DD-MM-YYYY" (ionChange)="dateChanged($event)" pickerFormat="DDMMYYYY" [(ngModel)]="time"></ion-datetime>
+      </ion-item>
+    </ion-card-content>
+  </ion-card>
+  <!-- Date Picker Ends -->
+
+  <!-- Checkbox & Radio Begins -->
+  <ion-card>
+    <ion-card-header>
+      Checkbox & Radio Button
+    </ion-card-header>
+    <ion-card-content>
+
+      <!-- Checkbox -->
+      <ion-item>
+        <ion-label>My fav car is Lamborghini.</ion-label>
+        <ion-checkbox color="dark"  (ionChange)="checkChanged($event)" checked="true"></ion-checkbox>
+      </ion-item>
+
+      <!-- Radio -->
+      <ion-item>
+        <ion-label>My fav bike is Ducati Scrabler</ion-label>
+        <ion-radio value="yes" (ionSelect)="radioChanged($event)"></ion-radio>
+      </ion-item>
+
+    </ion-card-content>
+  </ion-card>
+  <!-- Checkbox & Radio Ends -->
+
+  <!-- Actionsheet Begins -->
+  <ion-card>
+      <ion-card-header>
+        ActionSheet
+      </ion-card-header>
+      <ion-card-content>
+        <button ion-button (click)="presentActionSheet()">Actionsheet</button>
+      </ion-card-content>
+    </ion-card>
+    <!-- Actionsheet Ends -->
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <p padding-left style="text-align: center!important;">Created By:
+      <a href="https://github.com/MandaliyaPruthvi">Pruthvi Mandaliya</a>
+    </p>
+  </ion-toolbar>
+</ion-footer>
